@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="landingpage.component.css">
@@ -18,16 +18,16 @@
                     <h1>/LP/</h1>
                     <nav id="nav" class="">
                         <ul id="links">
-                            <li><a href="#inicio" class="seleccionado">INICIO</a></li>
-                            <li><a href="#sobremi">SOBRE MI</a></li>
-                            <li><a href="#servicios">SERVICIOS</a></li>
-                            <li><a href="#portafolio">PORTAFOLIO</a></li>
-                            <li><a href="#contacto">CONTACTO</a></li>
+                            <li><a href="#inicio" class="seleccionado" (click)="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" (click)="seleccionar(this)">SOBRE MI</a></li>
+                            <li><a href="#servicios" (click)="seleccionar(this)">SERVICIOS</a></li>
+                            <li><a href="#portafolio" (click)="seleccionar(this)">PORTAFOLIO</a></li>
+                            <li><a href="#contacto" (click)="seleccionar(this)">CONTACTO</a></li>
                         </ul>
                     </nav>
 
                     <!-- Iconos del menu responsibe -->
-                    <div id="icono-nav">
+                    <div id="icono-nav" (click)="responsiveMenu()">
                         <i class="fa-solid fa-bars"></i>
                     </div>
 
@@ -248,6 +248,8 @@
             <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
+
+    <script src="landingpage.component.ts"></script>
 
 </body>
 
